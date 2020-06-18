@@ -7,6 +7,6 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.phongbm.dihilt.HomeFragment"
+        android:name="com.phongbm.dihilt.presentation.view.HomeFragment"
         tools:layout="@layout/fragment_home" />
 </navigation>
