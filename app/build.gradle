@@ -32,6 +32,10 @@ android {
     }
 }
 
+ext {
+    hilt_lifecycle_viewmodel_version = '1.0.0-alpha01'
+}
+
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
 
@@ -47,6 +51,9 @@ dependencies {
 
     implementation "com.google.dagger:hilt-android:$hilt_version"
     kapt "com.google.dagger:hilt-android-compiler:$hilt_version"
+
+    implementation "androidx.hilt:hilt-lifecycle-viewmodel:$hilt_lifecycle_viewmodel_version"
+    kapt "androidx.hilt:hilt-compiler:$hilt_lifecycle_viewmodel_version"
 
     testImplementation 'junit:junit:4.13'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
