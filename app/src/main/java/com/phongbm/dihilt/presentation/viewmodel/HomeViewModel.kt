@@ -11,6 +11,6 @@ import java.util.*
 class HomeViewModel
 @ViewModelInject
 constructor() : ViewModel() {
-    var number = Random().nextInt()
+    var number = Random().nextInt(100)
 
 }

@@ -10,6 +10,7 @@ import androidx.fragment.app.viewModels
 import com.phongbm.dihilt.R
 import com.phongbm.dihilt.presentation.viewmodel.HomeViewModel
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.android.synthetic.main.fragment_home.*
 
 @AndroidEntryPoint
 class HomeFragment : Fragment() {
@@ -31,17 +32,38 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         Log.d(TAG, "onViewCreated()...")
-        Log.d(TAG, "onViewCreated()... number = ${viewModel.number}")
+
+        txtNumber.text = viewModel.number.toString()
+    }
+
+    override fun onStart() {
+        super.onStart()
+        Log.d(TAG, "onStart()...")
+    }
+
+    override fun onResume() {
+        super.onResume()
+        Log.d(TAG, "onResume()...")
+    }
+
+    override fun onPause() {
+        Log.d(TAG, "onPause()...")
+        super.onPause()
+    }
+
+    override fun onStop() {
+        Log.d(TAG, "onStop()...")
+        super.onStop()
     }
 
     override fun onDestroyView() {
-        super.onDestroyView()
         Log.d(TAG, "onDestroyView()...")
+        super.onDestroyView()
     }
 
     override fun onDestroy() {
-        super.onDestroy()
         Log.d(TAG, "onDestroy()...")
+        super.onDestroy()
     }
 
 }
